@@ -1,0 +1,15 @@
+---
+const { data } = fetchStrapiData()
+---
+
+  {data.map((item) => (
+    <ul>
+      <li key={item.id}>
+        <h2>{item.attributes.title}</h2>
+        <p>Автор: {item.attributes.author}</p>
+        <p>Опис: {item.attributes.description}</p>
+        <p>Створено: {item.attributes.createdAt}</p>
+      </li>
+  </ul>
+  ))}
+
